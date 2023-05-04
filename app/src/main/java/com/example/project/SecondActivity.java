@@ -28,7 +28,7 @@ public class SecondActivity extends AppCompatActivity {
 
     public void onResume() {
         super.onResume();
-        editText.setText(sharedPreferenceRef.getString("SharedPreferenceString","Empty"));
+        editText.setText(sharedPreferenceRef.getString("SharedPreferenceString",""));
     }
 
     public void saveToPref(View v){
