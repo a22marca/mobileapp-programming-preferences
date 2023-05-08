@@ -3,7 +3,7 @@
 
 En activity som kallas `SecondActivity` implementerades. Denna activity använder `activity_second.xml` för layout och `SecondActivity.java` för att exekvera java-kod. I `MainActivity` implementerades två widgets, en `Button` och `TextView`. Knappen öppnar `SecondActivity` genom att använda `intents`. I `SecondActivity` implementerades en `EditText` och `Button` widget. `EditText` används att för ta emot inmatning av text, medans knappen används för att spara texten till `SharePreferences`.
 
-I `SecondActivity` så kan texten som matats in till `EditText` widget:en sparas genom att trycka på en knapp. Då användaren trycker på knappen så exekveras metoden `SaveToPref()` som sparar den inmatade texten i `EditText` till en `SharedPreferences` instans genom att använda en `SharedPreferences.Editor`. Nedan visas ett kodstycke för metoden.
+I `SecondActivity` så kan texten som matats in till `EditText` widget:en sparas genom att trycka på en knapp. Då användaren trycker på knappen så exekveras metoden `SaveToPref()` som sparar den inmatade texten i `EditText` till en `SharedPreferences` instans genom att använda en `SharedPreferences.Editor`. Nedan visas ett kodstycke med metoden.
 
 ```java
     public void saveToPref(View v){
@@ -35,13 +35,13 @@ Nedan visas tre bilder där `SharedPreferences` först inte innehåller något s
 
 <figure align="center">
     <img src="MainActivity-1.png" width="50%">
-    <figcaption align="center"><b>MainAcitivty: SharedPreference har inget sparat värde</b></figcaption>
+    <figcaption align="center"><b>MainAcitivty: SharedPreferences har inget sparat värde</b></figcaption>
 </figure>
 <figure align="center">
 <img src="SecondActivity-1.png" width="50%">
-    <figcaption align="center"><b>SecondAcitivty: String sparas till SharedPreference</b></figcaption>
+    <figcaption align="center"><b>SecondAcitivty: String sparas till SharedPreferences</b></figcaption>
 </figure>
 <figure align="center">
 <img src="MainActivity-2.png" width="50%">
-    <figcaption align="center"><b>MainAcitivty: String från SharedPreference visas</b></figcaption>
+    <figcaption align="center"><b>MainAcitivty: String från SharedPreferences visas</b></figcaption>
 </figure>
