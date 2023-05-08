@@ -1,9 +1,9 @@
 
 # Rapport
 
-En activity som kallas `SecondActivity` implementerades. Denna activity använder `activity_second.xml` för layout och `SecondActivity.java` för att exekvera java-kod. I `MainActivity` implementerades två widgets, en `Button` och `TextView`. Knappen öppnar `SecondActivity` genom att använda `intents`. I `SecondActivity` implementerades en `EditText` och `Button` widget. `EditText` används att för ta emot inmatning av text, medans knappen används för att spara texten till en `SharePreference` instans.
+En activity som kallas `SecondActivity` implementerades. Denna activity använder `activity_second.xml` för layout och `SecondActivity.java` för att exekvera java-kod. I `MainActivity` implementerades två widgets, en `Button` och `TextView`. Knappen öppnar `SecondActivity` genom att använda `intents`. I `SecondActivity` implementerades en `EditText` och `Button` widget. `EditText` används att för ta emot inmatning av text, medans knappen används för att spara texten till `SharePreferences`.
 
-I `SecondActivity` så kan texten som matats in till `EditText` widget:en sparas genom att trycka på en knapp. Då användaren trycker på knappen så exekveras metoden `SaveToPref()`, som sparar den inmatade texten i `EditText` till en `SharedPreference` instans genom att använda en `SharedPreference.Editor`. Nedan visas ett kodstycke för metoden.
+I `SecondActivity` så kan texten som matats in till `EditText` widget:en sparas genom att trycka på en knapp. Då användaren trycker på knappen så exekveras metoden `SaveToPref()` som sparar den inmatade texten i `EditText` till en `SharedPreferences` instans genom att använda en `SharedPreferences.Editor`. Nedan visas ett kodstycke för metoden.
 
 ```java
     public void saveToPref(View v){
@@ -22,7 +22,7 @@ För att kunna hämta texten som sparats till `SharedPreferences` så används e
 
 ```
 
-Nästa gång användaren navigerar till `SecondActivity` så kommer även `EditText` widget:en fyllas med den text som senast sparats i `SharedPreference` objektet. Detta utförs på samma sätt som för `TextView`:en i `MainActivity`, genom användning av `onResume` metoden (se kodstycket nedan).
+Nästa gång användaren navigerar till `SecondActivity` så kommer även `EditText` widget:en fyllas med den text som senast sparats i `SharedPreferences` objektet. Detta utförs på samma sätt som för `TextView`:en i `MainActivity`, genom användning av `onResume` metoden (se kodstycket nedan).
 
 ```java
     public void onResume() {
@@ -31,7 +31,7 @@ Nästa gång användaren navigerar till `SecondActivity` så kommer även `EditT
     }
 ```
 
-Nedan visas tre bilder där `SharedPreference` först inte innehåller något sparat värde och `MainActivity` visar strängen "Empty". Fortsättningsvis visar den andra bilden att en text sparas till `SharedPreferences` i `SecondActivity`, som sedan visas i `MainActivity` i den tredje bilden. 
+Nedan visas tre bilder där `SharedPreferences` först inte innehåller något sparat värde och `MainActivity` visar strängen "Empty". Fortsättningsvis visar den andra bilden att en text sparas till `SharedPreferences` i `SecondActivity`, som sedan visas i `MainActivity` på den tredje bilden. 
 
 <figure align="center">
     <img src="MainActivity-1.png" width="50%">
